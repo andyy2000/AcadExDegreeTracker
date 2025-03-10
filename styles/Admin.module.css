@@ -1,0 +1,595 @@
+/* Admin.module.css */
+.adminContainer {
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  }
+  
+  .adminSidebar {
+    width: 260px;
+    background: linear-gradient(to bottom, #4338ca 0%, #3b82f6 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .adminSidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/pattern.svg');
+    background-size: cover;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+  
+  .brandContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .brandLogo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    margin-right: 12px;
+  }
+  
+  .brandName {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .brandTagline {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: -2px;
+  }
+  
+  .navMenu {
+    margin-top: 2rem;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .navItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .navItemActive {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .navIcon {
+    margin-right: 12px;
+    font-size: 18px;
+    width: 20px;
+    opacity: 0.9;
+  }
+  
+  .navText {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .adminControlLabel {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 1rem;
+  }
+  
+  .adminFooter {
+    margin-top: auto;
+    font-size: 12px;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .adminMain {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .pageTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  
+  .userSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .adminAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #e2e8f0;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #4338ca;
+  }
+  
+  .adminAvatarImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .adminUserInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .adminUserName {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+  }
+  
+  .adminUserRole {
+    font-size: 12px;
+    color: #64748b;
+  }
+  
+  .adminContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .statsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .statCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f0f9ff;
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .statValue {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+  }
+  
+  .statLabel {
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  .schoolFormContainer {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .schoolFormContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  }
+  
+  .formTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .formIcon {
+    margin-right: 10px;
+  }
+  
+  .formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formField {
+    margin-bottom: 1rem;
+  }
+  
+  .formLabel {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .formInput:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
+  
+  .formInput::placeholder {
+    color: #a0aec0;
+  }
+  
+  .formSubmitButton {
+    background: linear-gradient(to right, #4f46e5, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+  }
+  
+  .formSubmitButton:hover {
+    background: linear-gradient(to right, #4338ca, #2563eb);
+    box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .formSubmitButton:active {
+    transform: translateY(0);
+  }
+  
+  .formSubmitButton:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .successMessage {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    color: #166534;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .errorMessage {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fef2f2;
+    border-left: 4px solid #ef4444;
+    color: #b91c1c;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .schoolCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .schoolInfo {
+    flex: 1;
+  }
+  
+  .schoolName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+  }
+  
+  .schoolDetails {
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  .schoolCode {
+    background: #f0f9ff;
+    color: #3b82f6;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .logoutButton {
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+  }
+  
+  .logoutButton:hover {
+    background: #dc2626;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .statsContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .adminContainer {
+      flex-direction: column;
+    }
+    
+    .adminSidebar {
+      width: 100%;
+      padding: 1.5rem;
+    }
+    
+    .adminMain {
+      padding: 1.5rem;
+    }
+    
+    .formGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .statsContainer {
+      grid-template-columns: 1fr;
+    }
+    
+    .adminHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .userSection {
+      margin-top: 1rem;
+    }
+  }
+  /* Add these styles to your Admin.module.css file */
+
+.counselorSection {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .counselorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .counselorTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+  }
+  
+  .counselorTitle::before {
+    content: '👨‍🏫';
+    margin-right: 8px;
+  }
+  
+  .addCounselorButton {
+    background: #f0f9ff;
+    color: #3b82f6;
+    border: 1px solid #93c5fd;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .addCounselorButton::before {
+    content: '+';
+    margin-right: 4px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .addCounselorButton:hover {
+    background: #e0f2fe;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+  }
+  
+  .counselorCard {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .counselorCard:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+  }
+  
+  .counselorCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .counselorNumber {
+    font-weight: 600;
+    color: #3b82f6;
+    font-size: 15px;
+  }
+  
+  .removeCounselorButton {
+    background: #fee2e2;
+    color: #ef4444;
+    border: none;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .removeCounselorButton:hover {
+    background: #fecaca;
+  }
+  
+  /* Dark mode support */
+  .adminContainer.dark .counselorCard {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  .adminContainer.dark .counselorCardHeader {
+    border-color: #334155;
+  }
+  
+  .adminContainer.dark .counselorNumber {
+    color: #60a5fa;
+  }
+  
+  .adminContainer.dark .addCounselorButton {
+    background: #0f172a;
+    border-color: #1e40af;
+    color: #60a5fa;
+  }
+  
+  .adminContainer.dark .addCounselorButton:hover {
+    background: #1e293b;
+  }
+  
+  .adminContainer.dark .removeCounselorButton {
+    background: #7f1d1d;
+    color: #fecaca;
+  }
+  
+  .adminContainer.dark .removeCounselorButton:hover {
+    background: #991b1b;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .counselorHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .addCounselorButton {
+      margin-top: 0.5rem;
+    }
+  }

@@ -1,0 +1,197 @@
+/* Denied.module.css */
+.deniedContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .deniedContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/pattern.svg');
+    background-size: cover;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+  
+  .deniedCard {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.1), 0 10px 10px -5px rgba(239, 68, 68, 0.04);
+    text-align: center;
+    position: relative;
+    animation: bounceIn 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  
+  .deniedCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #ef4444 0%, #f87171 100%);
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .lockIcon {
+    width: 80px;
+    height: 80px;
+    background-color: #fef2f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    color: #ef4444;
+    font-size: 36px;
+  }
+  
+  .deniedTitle {
+    font-size: 28px;
+    font-weight: 800;
+    color: #dc2626;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+  }
+  
+  .deniedMessage {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .errorCode {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  
+  .actionButton {
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+    display: inline-block;
+  }
+  
+  .actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+  }
+  
+  .actionButton:active {
+    transform: translateY(0);
+  }
+  
+  .secondaryButton {
+    background: transparent;
+    color: #6b7280;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  
+  .secondaryButton:hover {
+    color: #1f2937;
+    background: #f3f4f6;
+  }
+  
+  .actionContainer {
+    margin-top: 1.5rem;
+  }
+  
+  .brandFooter {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+  
+  .logoText {
+    margin-right: 0.5rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;  
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    20% {
+      transform: scale(1.03);
+    }
+    40% {
+      transform: scale(0.98);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.01);
+    }
+    80% {
+      transform: scale(0.99);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .deniedCard {
+      padding: 2rem;
+    }
+  
+    .lockIcon {
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+    }
+  
+    .deniedTitle {
+      font-size: 24px;
+    }
+  
+    .actionButton, .secondaryButton {
+      display: block;
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+  }
